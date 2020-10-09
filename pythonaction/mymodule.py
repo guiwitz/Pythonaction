@@ -1,7 +1,3 @@
-import os
-import numpy as np
-
-
 def my_function(a):
     """
     This is my function.

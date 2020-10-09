@@ -3,13 +3,14 @@ from subprocess import Popen, PIPE
 
 
 def get_git_version():
+    line = None
     try:
         p = Popen(["git", "describe", "--abbrev=%d" % 4], stdout=PIPE, stderr=PIPE)
         p.stderr.close()
         line = p.stdout.readlines()[0]
         line = line.decode("utf-8").strip()
         return line
-    except:
+    except line is None:
         return None
 
 
@@ -33,12 +34,12 @@ def get_version():
 def set_version():
 
     current_folder = os.path.dirname(__file__)
-    try:
-        version_git = get_git_version()
+    version_git = get_git_version()
+    if version_git is not None:
         with open(os.path.join(current_folder, "version.txt"), "w") as f:
             f.write(version_git)
             f.close()
-    except:
+    else:
         print("Can't read git version")
 
 

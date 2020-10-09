@@ -1,6 +1,5 @@
 import numpy as np
 import numpy.testing
-import pytest
 
 from pythonaction import mymodule
 
