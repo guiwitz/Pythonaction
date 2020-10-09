@@ -10,7 +10,7 @@ def get_git_version():
         line = p.stdout.readlines()[0]
         line = line.decode("utf-8").strip()
         return line
-    except line is None:
+    except Exception:
         return None
 
 
