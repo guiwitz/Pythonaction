@@ -4,5 +4,6 @@ channels:
 dependencies:
   - python
   - numpy
+  - pip
   - pip:
     - .
