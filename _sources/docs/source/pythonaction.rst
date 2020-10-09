@@ -12,6 +12,14 @@ pythonaction.mymodule module
    :undoc-members:
    :show-inheritance:
 
+pythonaction.second\_module module
+----------------------------------
+
+.. automodule:: pythonaction.second_module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pythonaction.version module
 ---------------------------
 
