@@ -1,0 +1,6 @@
+name: pythonaction
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
