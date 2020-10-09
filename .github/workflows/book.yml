@@ -29,6 +29,12 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+
+    # Show packages
+    - name: Show packages
+      run: |
+        $CONDA/bin/conda list
+
     # Compile the docs
     - name: Compile sphinx
       run: |
