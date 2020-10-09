@@ -1,6 +1,7 @@
 import os
 import numpy as np
 
+
 def my_function(a):
     """
     This is my function.
@@ -15,6 +16,6 @@ def my_function(a):
     b: 2d array
 
     """
-    
+
     b = 3 * a
     return b
