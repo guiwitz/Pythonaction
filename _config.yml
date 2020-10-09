@@ -2,3 +2,9 @@
 title: Pythonaction documentation
 author: Guillaume Witz
 #logo: 'logo.png'
+
+sphinx:
+  extra_extensions: [
+  'sphinx.ext.autodoc',
+  'sphinx.ext.napoleon'
+  ]
