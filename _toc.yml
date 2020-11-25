@@ -1,3 +1,4 @@
 - file: docs/introd
 - file: docs/notebook
+- file: docs/dask_notebook
 - file: docs/source/modules

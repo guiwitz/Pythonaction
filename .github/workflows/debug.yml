@@ -1,0 +1,36 @@
+name: debug
+
+# Only run this when the master branch changes
+on: [workflow_dispatch]
+#on:
+#  push:
+#    branches:
+#    - master
+
+# This job installs dependencies, build the book, and pushes it to `gh-pages`
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # Install dependencies
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+
+    # Install conda dependencies
+    - name: Install dependencies
+      run: |
+        # $CONDA is an environment variable pointing to the root of the miniconda directory
+        $CONDA/bin/conda env update --file environment.yml --name base
+    
+    # Install pip dependencies
+    - name: Install dependencies
+      run: |
+        $CONDA/bin/pip install -r requirements.txt
+
+    # debug using tmate
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3

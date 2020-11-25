@@ -5,5 +5,8 @@ dependencies:
   - python
   - numpy
   - pip
+  - dask-jobqueue
   - pip:
     - .
+    - tqdm
+
